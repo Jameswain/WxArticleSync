@@ -10,8 +10,6 @@ class MpWeixin {
     constructor(appID,appSecret) {
         this.appID = appID;
         this.appSecret = appSecret;
-
-
     }
 
     /**
@@ -39,12 +37,23 @@ class MpWeixin {
      */
     async getAccessToken() {
         const href = `https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=${this.appID}&secret=${this.appSecret}`;
+        //获取本地存储的access_token
         const accessTokenFile = this.getAccessTokenForLocalDisk();
         const currentTime = Date.now();
         //如果本地文件中的access_token为空 或者 access_token的有效时间小于当前时间 表示access_token已过期
         if(accessTokenFile.access_token === '' || accessTokenFile.expires_time < currentTime) {
-            const result = await axios.get(href);
-            console.log(result);
+            try {
+                const {status,data} = await axios.get(href);
+                console.log('status : ',status);
+                console.log('data : ',data);
+                //将access_token保存到本地文件中
+                accessTokenFile.access_token = data.access_token;
+                accessTokenFile.expires_time = Date.now() + (parseInt(data.expires_in) - 180) * 1000;               //access_token 有效期1小时57分钟
+                fe.outputJsonSync(path.resolve(__dirname,'config','token',`${this.appID}.json`),accessTokenFile);
+                return data.access_token;
+            } catch (e) {
+                console.log('请求获取access_token出错：',e);
+            }
         }
         //access_token 没有过期，则直接返回本地存储的token
         else {
