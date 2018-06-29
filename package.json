@@ -1,0 +1,28 @@
+{
+  "name": "wxarticlesync",
+  "version": "1.0.0",
+  "description": "将微信订阅号的文章定时同步到数据库中",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jameswain/WxArticleSync.git"
+  },
+  "keywords": [
+    "Node",
+    "微信订阅号",
+    "微信公众号"
+  ],
+  "author": "Jameswain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jameswain/WxArticleSync/issues"
+  },
+  "homepage": "https://github.com/Jameswain/WxArticleSync#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "fs-extra": "^6.0.1"
+  }
+}
