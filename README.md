@@ -2,7 +2,7 @@
 
 本文源码：<https://github.com/Jameswain/WxArticleSync> 
 
-​    ![img](file:///D:/Documents/My Knowledge/temp/2900168e-9aeb-4825-8fc8-484a814c0f50/128/index_files/0.7547024588164581.png)
+​    ![img](https://vipkshttps9.wiz.cn/wiz-resource/1b300862-b565-454e-bb0f-541f765397ff/2900168e-9aeb-4825-8fc8-484a814c0f50/index_files/0.7547024588164581.png)
 
 ​    最近PM有一个需求：把5个公众号的所有文章定时同步到小程序的数据库里，10分钟同步一次。实现这个需求当时我想了两种方案
 
