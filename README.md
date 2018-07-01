@@ -238,7 +238,7 @@ CREATE TABLE `article` (
 
 创建表操作也可以通过一些图形化软件进行操作，比如Navicat，操作界面如下： 
 
-![img](file:///D:/Documents/My%20Knowledge/temp/2900168e-9aeb-4825-8fc8-484a814c0f50/128/index_files/5ab4d6ce-e96b-4f6d-9062-120666ebeb30.png) 
+![img](https://raw.githubusercontent.com/Jameswain/WxArticleSync/master/images/5ab4d6ce-e96b-4f6d-9062-120666ebeb30.png)
 
 
 
